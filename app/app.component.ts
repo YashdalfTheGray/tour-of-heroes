@@ -1,14 +1,12 @@
 import { Component } from 'angular2/core';
-
-interface Hero {
-    id: number;
-    name: string
-}
+import { Hero } from './hero';
+import { HeroDetailComponent } from './hero-detail.component';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.tpl.html',
-    styleUrls: ['app/my-app.css']
+    styleUrls: ['app/my-app.css'],
+    directives: [HeroDetailComponent]
 })
 export class AppComponent {
     public title = 'Tour of Heroes';
